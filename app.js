@@ -9,8 +9,13 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket){
 	console.log('nouvelle connection');
+
 	socket.on('disconnect', function(socket){
 		console.log('utilisateur deconnecté');
+	});
+
+	socket.on('chat message', function(message){
+		console.log('message: ' + message);
 	});
 });
 
