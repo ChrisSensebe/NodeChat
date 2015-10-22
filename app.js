@@ -9,6 +9,9 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket){
 	console.log('nouvelle connection');
+	socket.on('disconnect', function(socket){
+		console.log('utilisateur deconnecté');
+	});
 });
 
 http.listen(8080, function(){
