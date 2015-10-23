@@ -3,6 +3,7 @@
 	<head>
 		<title>Node Chat</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
 	</head>
 
 	<body>
@@ -25,9 +26,14 @@
 					</form>
 				</div>
 			</div>
+			<div class="row ">
+				<col-md-12>
+					<ul id="messages"></ul>
+				</col-md-12>
+			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<form action="">
+					<form action="" id="formMessage">
 						<div class="form-group">
 							<label for="">Message</label>
 							<input type="text" class="form-control" id="message">
@@ -44,8 +50,16 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script>
 			var socket = io();
+			var pseudo;
 
-			$('#messageForm').submit(function(){
+			$('#formPseudo').submit(function(){
+				pseudo = $('#pseudo').val();
+				$('#formMessage').show();
+				$('#formPseudo').hide();
+				return false;
+			});
+
+			$('#formMessage').submit(function(){
 				socket.emit('chat message', $('#message').val());
 				$('#message').val('');
 				return false;
