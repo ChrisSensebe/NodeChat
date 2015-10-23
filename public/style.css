@@ -1,3 +1,7 @@
 #formMessage{
 	display: none;
 }
+
+ul{
+	list-style: none;
+}

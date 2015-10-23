@@ -2,6 +2,6 @@
 	display: none;
 }
 
-#messages{
+ol{
 	list-style-type: none;
 }
