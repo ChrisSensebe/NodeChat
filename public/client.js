@@ -16,9 +16,9 @@ $('#formMessage').submit(function(){
 });
 
 socket.on('new client', function(pseudo){
-	$('#messages').append($('<li>').text('Serveur: ' + pseudo + ' viens de se connecter'));
+	$('#messages').append($('<li>').text('Serveur : ' + pseudo + ' viens de se connecter'));
 });
 
 socket.on('chat message', function(message){
-	$('#messages').append($('<li>').text(message.pseudo + ' : ' + message.message));
+	$('#messages').append($('<li>').text(message.pseudo + ' : ' + message.message))
 });
