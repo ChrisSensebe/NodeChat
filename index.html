@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>Node Chat</title>
+		<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="style.css">
 	</head>
@@ -22,7 +24,7 @@
 								<input type="text" class="form-control" id="pseudo">
 							</div>
 							<div class="form-group">
-								<button class="btn btn-default">Valider</button>
+								<button class="btn btn-primary">Valider</button>
 							</div>
 						</form>
 					</div>
@@ -44,16 +46,19 @@
 								<input type="text" class="form-control" id="message">
 							</div>
 							<div class="form-group">
-								<button class="btn btn-default">Envoyer</button>
+								<button class="btn btn-primary">Envoyer</button>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</footer>
+		<!-- recupere socket.io.js fourni par le serveur -->
 		<script src="/socket.io/socket.io.js"></script>
+		<!-- Jquery & bootstrap -->
 		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!-- script execute cote client -->
 		<script src="client.js"></script>
 	</body>
 </html>
