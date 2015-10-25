@@ -9,7 +9,7 @@ var express = require('express'),
 */
 var app    = express()
 var server = http.Server(app);
-var io     = socket(http);
+var io     = socket(server);
 /*
 /	sert les fichiers statiques (client.js et style.css)
 /	depuis le repertoire public/
