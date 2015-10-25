@@ -17,8 +17,13 @@ io.on('connection', function(socket){
 		console.log('utilisateur deconnecté');
 	});
 
+	socket.on('new client', function(pseudo){
+		console.log('Nouvel utilisateur: ' + pseudo);
+		io.emit('new client', pseudo);
+	});
+
 	socket.on('chat message', function(message){
-		console.log(message[0] + ': ' + message[1]);
+		console.log(message.pseudo + ': ' + message.message);
 		io.emit('chat message', message);
 	});
 });
