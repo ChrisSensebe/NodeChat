@@ -32,11 +32,11 @@ $('#formMessage').submit(function(){
 /	affiche un message quand un nouveau client se connecte
 */
 socket.on('new client', function(pseudo){
-	$('#messages').append($('<li>').text('Serveur : ' + pseudo + ' viens de se connecter'));
+	$('#messages').prepend($('<li>').text('Serveur : ' + pseudo + ' viens de se connecter'));
 });
 /*
 /	affiche les messages recus depuis le serveur
 */
 socket.on('chat message', function(message){
-	$('#messages').append($('<li>').text(message.pseudo + ' : ' + message.message))
+	$('#messages').prepend($('<li>').text(message.pseudo + ' : ' + message.message))
 });
