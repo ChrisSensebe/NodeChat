@@ -5,18 +5,6 @@ ul{
 	list-style: none;
 	font-size: 16px;
 }
-
-/* Sticky footer */
-
-html, body{
-  height: 100%;
-}
-#wrap{
-  min-height: 100%;
-  height: auto;
-  margin: 0 auto -150px;
-  padding: 0 0 150px;
-}
-footer{
-  height: 150px;
+li{
+	overflow: auto;
 }
